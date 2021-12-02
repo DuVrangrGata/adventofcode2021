@@ -31,6 +31,7 @@ int main()
   // the inital SLIDING_WINDOW_SIZE values in the normal loop
   while (getline(stream, line)) {
 
+    // Assume input file has correct format
     int current_number = std::stoi(line);
 
     sliding_window.erase(sliding_window.begin());

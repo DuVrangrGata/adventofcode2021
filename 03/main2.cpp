@@ -15,15 +15,13 @@ convert_binary_string_to_decimal(const std::string& binary, size_t size)
 
   for (size_t i = 0; i < size; i++) {
 
-    char c = binary[i];
-    // Convert charcode to value as int: 48 = 0, 49 = 1
-    int value = (int)c - 48;
+    if(binary[i] == '1') {
+      result += multiplier;
+    }
 
-    result += multiplier * value;
     multiplier /= 2;
 
   }
-
 
   return result;
 

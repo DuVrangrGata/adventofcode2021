@@ -62,6 +62,8 @@ split_most_least_common(const std::vector<std::string>& in, size_t index, search
 
   }
 
+  fprintf(stdout, "Recursion Mode: %d, Num_of_Zeros: %ld, Num_of_Ones: %ld, Current_index: %ld\n", (int)sf, zeros.size(), ones.size(), index);
+
   if (zeros.size() > ones.size()) {
     switch(sf) {
     // We are searching for the most common value

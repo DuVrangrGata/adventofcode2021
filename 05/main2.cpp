@@ -30,11 +30,17 @@ increment_value_in_2D_array(int* mem, int x, int max_x, int y)
   mem[(y * max_x) + x]++;
 }
 
-int main() {
+int main(int argc, char** argv) {
+
+  std::string filename = "input.txt";
+
+  if(argc > 1) {
+    filename = argv[1];
+  }
 
   std::string line;
 
-  std::ifstream stream("input.txt", std::ifstream::in);
+  std::ifstream stream(filename, std::ifstream::in);
 
   if (!stream.is_open()) {
     fprintf(stderr, "Failed to open file");

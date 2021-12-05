@@ -70,7 +70,8 @@ int main() {
 
   // Allocate memory to save lines from instructions in coord-like system
   // Save 2D Array as 1D
-  size_t num_of_elements = biggest_x * biggest_y;
+  // Increment biggest num because of zero indexing
+  size_t num_of_elements = (biggest_x + 1) * (biggest_y + 1);
   size_t coords_size = sizeof(int) * num_of_elements;
   int* coords_mem = (int*)malloc(coords_size);
   memset(coords_mem, 0, coords_size);

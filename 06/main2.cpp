@@ -42,7 +42,7 @@ int main(int argc, char** argv) {
   fish[std::stoi(line)]++;
 
   // NOTE: Just using a vector with one element per fish
-  // is by far not efficient enough any more
+  // is by far not efficient enough
 
   // Use Array [num_of_zero_state_fish num_of_one_state_fish ... num_of_eight_state_fish]
   // Shift the indicies instead of swapping elements around
